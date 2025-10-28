@@ -1,18 +1,19 @@
 function Invertir_Numeros () {
-    let numero=0, invertido=0, r;
-    numero=[123,456,789]
-    for (let i=0; i<numero.length; i++){
-        num=numero[i];
-        invertido=0;   
-        while (num>0){
-            r=num%10;
-            invertido=(invertido*10)+r;
-
-        }
-        invertido.push(invertido);
-    }
-            console.log(`el numero invertido es ${invertido}`);
+    let numeros=[], invertido=0, digito=0, número=0, i=0;
+    numeros=[123,456,789];
+    invertido=0
+    número=0
+    digito=0
+    for (i=0;i<numeros.length;i++){
+        numero=numero[i];
+        while(numero>0){
+            digito=numero%10;
+            invertido=(invertido*10)+digito;
+            numero=(numero-digito)/10
+        }
+        console.log(`el numero invertido es ${invertido}`);
         alert(`el numero invertido es ${invertido}`);
+     }
 }
 debugger
 Invertir_Numeros();
